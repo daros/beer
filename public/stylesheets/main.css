@@ -1,0 +1,50 @@
+
+html,body {
+    
+    font-size: 32px;
+}
+
+label {
+    font-family: "Courier","Georgia";
+    display: block;
+}
+
+input {
+    
+    color: black;
+    display: block;
+    width: 400px;
+    font-size: 32px;
+}
+
+textarea {
+    width:  400px;
+    height: 6em;
+}
+
+table {
+    margin-top: 50px;
+    border-collapse:collapse;
+}
+
+table,thead,tbody, td, th {
+    font-family: "Courier";
+    font-size: 16px;
+    border: 1px solid #464646;
+}
+
+td {
+   border-right: 1px solid #464646;
+   text-align: right;
+   padding-left: 1em;
+}
+
+thead tr, thead {
+    background: #464646;
+    color: white;
+}
+
+.odd {
+    background-color: #efefef;
+}
+§

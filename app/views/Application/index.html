@@ -1,0 +1,92 @@
+#{extends 'main.html' /}
+
+
+#{set title:'Öl' /}
+
+${flash.success}
+
+#{form @Application.add()}
+    <label>Vem</label> 
+    <div class="error">#{error 'drinker.name' /}</div>
+    <input type="text" name="drinker.name" value="${flash['drinker.name']}" />
+    
+    <label>Vad</label>
+    <div class="error">#{error 'beer.name' /}</div>
+    <input type="text" name="beer.name" value="${flash['beer.name']}" />
+    
+    
+    <label>Betyg</label>
+    <div class="error">#{error 'grade.grade' /}</div>
+    <input type="text" name="grade.grade" value="${flash['grade.grade']}" />
+    
+    <label>Kommentar</label>
+    <textarea name="grade.comment"></textarea>
+    
+    <input type="submit" name="submit" value="Lägg till" />
+    
+#{/}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table #{ifnot grades}style="display: none"#{/}>
+    <thead>
+        <tr>
+            <th>Vem</th>
+            <th>Vad</th>
+            <th>Betyg</th>
+            <th>Kommentar</th>
+       </tr>
+    </thead>
+    <tbody>
+        #{list grades, as:'g'}
+            <tr class="${g_parity}">
+                <td>${g.drinker.name}</td>
+                <td>${g.beer.name}</td>
+                <td>${g.grade}</td>
+                <td>${g.comment}</td>
+            </tr>
+        #{/list}
+    </tbody>
+</table>
